@@ -101,9 +101,26 @@ a { text-decoration: none;}
     flex-direction: column; 
     color: var(--cor-clara);
     justify-content: center;
+
+    h2, p {
+        color: var(--cor-clara);
+        text-align: center;
+    }
+
+    h2 {
+        font-size: clamp(3rem, 10vw, 7rem);
+    }
+
+    p { 
+        font-size: clamp(1.5rem, 3vw, 3rem);
+    }
 }
 
-.destaque h2, .destaque p {
-    color: var(--cor-clara);
-    text-align: center;
-}
+
+/* Sobre a função clamp()
+Função ítil para redimensionamento responsivo de acordo com os crotérios de tamanhos mínimos, ideal/variável/responsivo e máximo. Uso mais comum é para textos responsivos, mas pode ser usada com qualquer propriedade que envolva tamanhos (width, heigh, etc.)
+
+clamp(
+tamanho minimo/variáve/respomsivo,
+tamanho máximo
+)*/
