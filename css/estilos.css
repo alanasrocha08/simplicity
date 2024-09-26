@@ -44,10 +44,24 @@ a { text-decoration: none;}
 }
 
 .topo {
-    height: 12vh; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top:0;
+    background-color: var(--cor-clara);
+
+
+    /* Classe .limitador específico para uni no cabeçalho/topo: além das configurações gerais (width e magin), AQUI ela também tem altura e ajustes do flex. */
+    .limitador{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 12vh; 
+    }
+}
+
+/*Classe limitador de uso geral, sempre terá largura de 95vw e margin auto não importando onde será aplicada.*/
+.limitador {
+    width: 95vw;
+    margin: auto;
 }
 
 .titulo-menu a {
@@ -169,3 +183,41 @@ address {
 .front-end, .historia, .localizacao {
     text-align: center;
 }
+
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+
+    h2 {
+        color: var(--cor-clara);
+        text-shadow: var(--cor-clara) 2px 2px 5px ;
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 2rem;
+    }
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.rodape {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+
