@@ -289,9 +289,28 @@ img {
         height: 300px;
     }
 }
+}
+/* Media Queires: regras de uso condicional de acordo com o tamnho de tela necessário para ajustes no site. */
 
+@media screen and (min-width: 600px){
+    /* Escondendo a palavra menu */
+    .titulo-menu { display: none}
 
+    /* Exibindo os links (lista de links) do menu */
+    .links-menu { 
+        display: flex;
 
+        /* Forçamos cada item da lista a ter largura total e, com isso, redistribuir espaços/alinhamentos */
+        li { width: 100%}
+    }
+
+    /* Ajustamos o tamanho do menu (nav)como um todo */
+    .menu {width: 60%;}
+}
+
+@media screen and (min-width: 1000px) {
+    html { font-size: 18px;}
+    .limitador{max-width: 1000px;}
 }
 
 
