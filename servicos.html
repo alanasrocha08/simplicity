@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+<!-- Importando o CSS do pluging lightbox -->
+    <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 
 </head>
@@ -50,10 +52,17 @@
 </p>
 
 <figure class="galeria">
-    <img src="imagens/consultoria-treinamento-mini.jpg" alt="imagens/consultoria-treinamento-mini.jpg">
-    <img src="imagens/desenvolvimento-web-mini.jpg" alt="imagens/desenvolvimento-web-mini.jpg">
-    <img src="imagens/design-grafico-mini.jpg" alt="imagens/design-grafico-mini.jpg">
-    <img src="imagens/marketing-digital-mini.jpg" alt="imagens/marketing-digital-mini.jpg">
+    <a data-title="Consultoria e treinamento" data-lightbox="foto" href="imagens/consultoria-treinamento.jpg">
+        <img src="imagens/consultoria-treinamento-mini.jpg" alt="imagens/consultoria-treinamento-mini.jpg">
+    </a>
+    <a data-title="desenvolvimento web" data-lightbox="foto" href="imagens/desenvolvimento-web.jpg">
+        <img src="imagens/desenvolvimento-web-mini.jpg" alt=""></a>
+    <a data-title="design gráfico" data-lightbox="foto" href="imagens/design-grafico.jpg">
+        <img src="imagens/design-grafico-mini.jpg" alt="">
+    </a>
+    <a data-title="marketing digital" data-lightbox="foto" href="imagens/marketing-digital.jpg">
+        <img src="imagens/marketing-digital-mini.jpg" alt="">
+    </a>
 </figure>
 
 <p>
@@ -73,6 +82,20 @@
             Simplicity é um site ficticio desenvolvido para fins educacionais &copy; <time>2024</time>
         </p>
     </footer>
+
+    <!-- Importação da biblioteca jQuery (sempre primeiro) -->
+     <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- Impportação JS do pluging Lightbox -->
+    <script src="lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true, 
+          albumLabel:"Foto %1 de %2"
+        })
+    </script>
     
     <script src="js/menu.js"></script>
 
